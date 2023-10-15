@@ -1,9 +1,6 @@
-
-
 import '@/styles/globals.css'
-import { Inter } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+
 
 export const metadata = {
   title: 'Good Afternoon Creative',
@@ -12,8 +9,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className="items-center justify-center flex">
-      <body className="max-w-[1440px] w-full">{children}</body>
+    <html lang="en" className="items-center justify-center flex font-montreal">
+      <body className="max-w-[1440px] w-full px-8">{children}</body>
     </html>
   )
 }
