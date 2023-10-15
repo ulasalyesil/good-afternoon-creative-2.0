@@ -21,7 +21,7 @@ export default function Header() {
           and strategic foresight to help businesses achieve their branding
           goals.
         </p>
-        <Button label={"Get in touch"} />
+        <Button label={"Get in touch"} style={'dark'}/>
       </div>
       <div className="flex flex-col h-full items-end justify-end py-6 border-b border-black col-span-3 font-medium text-xl mb-1">
         <span className="text-neutral-400">REACH US AT</span>
