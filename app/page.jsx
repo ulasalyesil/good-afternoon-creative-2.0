@@ -2,9 +2,10 @@
 
 // packages
 import Image from "next/image";
+import { useState } from "react";
 
 // config
-import firebaseConfig from "@/config/firebaseConfig";
+import "@/styles/transitionOut.css";
 
 // components
 import Header from "@/components/header";
@@ -13,13 +14,25 @@ import logo from "@/components/assets/images/logo.svg";
 import circle from "@/components/assets/images/circle.svg";
 
 export default function Home() {
-  console.log(firebaseConfig);
+  const [animateBars, setAnimateBars] = useState(false);
+
+  const handleChipClick = () => {
+    setAnimateBars(true);
+  };
+  // console.log(firebaseConfig);
 
   return (
-    <main>
+    <main className="max-w-[1440px]">
+      <div className={`bartender ${animateBars ? "animate" : ""}`}>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+        <div className="bar"></div>
+      </div>
       <div className="flex flex-col items-center gap-10 px-8">
         <div className="h-screen flex flex-col items-center justify-between pb-6 relative">
-          <Header />
+          <Header onChipClick={handleChipClick} />
           <Image src={logo} alt="good afternoon logo" />
           <Image
             src={circle}
