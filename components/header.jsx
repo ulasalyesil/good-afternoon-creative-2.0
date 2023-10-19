@@ -21,7 +21,10 @@ export default function Header({ onChipClick }) {
           and strategic foresight to help businesses achieve their branding
           goals.
         </p>
+        <div className="flex gap-2">
         <Button label={"Get in touch"} style={"dark"} />
+        <Button label={"Join our newsletter"} style={"light"}></Button>
+        </div>
       </div>
       <div className="flex flex-col h-full items-end justify-end py-6 border-b border-black col-span-3 font-medium text-xl mb-1">
         <span className="text-neutral-400">REACH US AT</span>
